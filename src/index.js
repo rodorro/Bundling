@@ -1,15 +1,6 @@
-const scores = [90, 75, 60, 99, 94, 30];
+import logoImg from './content/logo_1.png';
 
-function getAvg(scores) {
-  return getTotalScore(scores) / scores.length;
-}
+const img = document.createElement('img');
+img.src = logoImg;
 
-function getTotalScore(scores) {
-  return scores.reduce((score, count) => score + count);
-}
-
-const averageScore = getAvg(scores);
-
-const messageToDisplay = `average score ${averageScore}`;
-
-document.write(messageToDisplay);
+document.getElementById('imgContainer').appendChild(img);

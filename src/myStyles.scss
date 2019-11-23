@@ -4,3 +4,8 @@ $blue-color: teal;
   background-color: indianred;
   background-color: $blue-color;
 }
+
+img {
+  display: block;
+  width: 200px;
+}
