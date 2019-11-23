@@ -12,7 +12,7 @@ module.exports = {
     appStyles: ['./mystyles.scss'],
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: './js/[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -42,7 +42,13 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         exclude: /node_modules/,
-        loader: 'url-loader?limit=5000',
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 5000,
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
       {
         test: /\.html$/,
@@ -57,7 +63,7 @@ module.exports = {
       template: 'index.html', //Name of template in ./src
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: './css/[name].[chunkhash].css',
       chunkFilename: '[id].css',
     }),
   ],
