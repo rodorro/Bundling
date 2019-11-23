@@ -1,0 +1,25 @@
+{
+  "name": "Bundling",
+  "version": "1.0.0",
+  "description": "Bundling Exercises",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodorro/Bundling.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodorro/Bundling/issues"
+  },
+  "homepage": "https://github.com/rodorro/Bundling#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
