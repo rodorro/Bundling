@@ -7,8 +7,11 @@ const basePath = __dirname;
 
 module.exports = {
   context: path.join(basePath, 'src'),
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   entry: {
-    app: ['regenerator-runtime/runtime', './index.js'],
+    app: ['regenerator-runtime/runtime', './index.jsx'],
     appStyles: ['./mystyles.scss'],
   },
   output: {
@@ -17,7 +20,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },

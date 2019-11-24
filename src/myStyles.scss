@@ -1,11 +1,18 @@
 $blue-color: teal;
 
-.red-background {
-  background-color: indianred;
+body {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title {
   background-color: $blue-color;
+  color: white;
 }
 
 img {
   display: block;
-  width: 200px;
+  width: 600px;
 }
