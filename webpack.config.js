@@ -8,10 +8,10 @@ const basePath = __dirname;
 module.exports = {
   context: path.join(basePath, 'src'),
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   entry: {
-    app: ['regenerator-runtime/runtime', './index.jsx'],
+    app: ['regenerator-runtime/runtime', './index.tsx'],
     appStyles: ['./mystyles.scss'],
   },
   output: {
@@ -19,6 +19,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          useBabel: true,
+          babelCore: '@babel/core', // needed for Babel v7
+        },
+      },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
@@ -70,6 +79,8 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
   ],
+  // For development https://webpack.js.org/configuration/devtool/#for-development
+  devtool: 'inline-source-map',
   devServer: {
     port: 8080,
   },

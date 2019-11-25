@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HelloWorldComponent = () => {
+export const HelloWorldComponent: React.FunctionComponent  = () => {
 
   return (
     <div>
