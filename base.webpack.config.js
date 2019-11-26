@@ -14,9 +14,6 @@ module.exports = {
     app: ['regenerator-runtime/runtime', './index.tsx'],
     appStyles: ['./mystyles.scss'],
   },
-  output: {
-    filename: './js/[name].[chunkhash].js',
-  },
   module: {
     rules: [
       {
@@ -32,24 +29,6 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpg)$/,
@@ -73,15 +52,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/
       template: 'index.html', //Name of template in ./src
-    }),
-    new MiniCssExtractPlugin({
-      filename: './css/[name].[chunkhash].css',
-      chunkFilename: '[id].css',
-    }),
-  ],
-  // For development https://webpack.js.org/configuration/devtool/#for-development
-  devtool: 'inline-source-map',
-  devServer: {
-    port: 8080,
-  },
+    })
+  ]
 };
