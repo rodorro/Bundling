@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const base = require('./base.webpack.config.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
   mode: 'production',
@@ -49,6 +50,9 @@ module.exports = merge(base, {
       test: /\.js$|\.jsx$|\.scss$|\.css$|\.html$/,
       threshold: 1024,
       minRatio: 0.8,
+    }),
+    new Dotenv({
+      path: './prod.env',
     }),
   ],
 });
