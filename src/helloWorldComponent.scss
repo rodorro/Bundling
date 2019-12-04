@@ -1,6 +1,26 @@
 $background: teal;
 
-.result-background {
+.hello-world-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hello-world-title {
   background-color: $background;
   color: white;
+  align-self: center;
+  font-size: 2em;
+}
+
+.hello-world-environment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.hello-world-api {
+  margin-top: 1em;
+  font-size: 1em;
 }
