@@ -14,7 +14,7 @@ In this exercise we are going to setup a web project with webpack.
 
 "npm run start:prod" to init project in production mode, you will have to open "https:/localhost:8081"
 
-"npm run build:perf" to view bunle analyzer results
+"npm run build:perf" to view bundle analyzer results
 
 
 
