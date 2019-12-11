@@ -5,7 +5,6 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
-  mode: 'production',
   output: {
     filename: '[name].[chunkhash].js',
   },

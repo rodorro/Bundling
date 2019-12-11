@@ -3,7 +3,6 @@ const base = require('./base.webpack.config.js');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
-  mode: 'development',
   /*resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom',

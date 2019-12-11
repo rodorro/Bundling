@@ -4,7 +4,7 @@
   "description": "Bundling Exercises",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development --open --config dev.webpack.config.js",
+    "start:dev": "webpack-dev-server --open --config dev.webpack.config.js",
     "start:prod": "node ./server",
     "build:dev": "rimraf dist && webpack --config dev.webpack.config.js",
     "build:prod": "rimraf dist && webpack --config prod.webpack.config.js",
