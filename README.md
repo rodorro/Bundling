@@ -1,17 +1,21 @@
-# Webpack-bundling
-Create Hello world react app with webpack bundling
+# Webpack Bundling Exercise
+
+In this exercise we are going to setup a web project with webpack.
 
 # Steps to build it
 
-"npm install" to install packages
+"npm install" to install previous sample packages
 
-"npm run build:dev" to build Hello world web app in development mode on Chrome
+"npm run build:dev" to build project in development mode
 
-"npm run build:prod" to build Hello world web app in production mode on Chrome
+"npm run start:dev" to init project in development mode, it will be opened in chrome automatically
 
-"npm run build:perf" to build Hello world web app and show bundler analyzer on Chrome
+"npm run build:prod" to build project in production mode
 
-"npm run start:dev" to start Hello world web app in development mode on Chrome
+"npm run start:prod" to init project in production mode, you will have to open "https:/localhost:8081"
 
-"npm run start:prod" to start Hello world web app in production mode on Chrome
+"npm run build:perf" to view bundle analyzer results
+
+
+
 
